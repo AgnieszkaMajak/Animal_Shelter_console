@@ -10,6 +10,7 @@ import exception.NegativeNumberException;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.Map;
 
 
 public class ShelterControl {
@@ -64,10 +65,8 @@ public class ShelterControl {
     }
 
     private void printAnimals() {
-        ArrayList<Animal> animals = shelter.getAnimals();
-        for (Animal animal : animals) {
-            printer.printText(animal.toString());
-        }
+        Map<Integer, Animal> animals = shelter.getAnimals();
+        System.out.println(animals);
     }
 
     private void exit() {

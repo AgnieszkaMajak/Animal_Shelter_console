@@ -4,14 +4,12 @@ import java.util.Objects;
 
 public abstract class Animal {
     private String name;
-    private int animalId;
     private int age;
     private double weight;
     private boolean castrated;
 
-    public Animal(String name, int animalId, int age, double weight, boolean castrated) {
+    public Animal(String name, int age, double weight, boolean castrated) {
         this.name = name;
-        this.animalId = animalId;
         this.age = age;
         this.weight = weight;
         this.castrated = castrated;
@@ -30,14 +28,6 @@ public abstract class Animal {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public int getAnimalId() {
-        return animalId;
-    }
-
-    public void setAnimalId(int animalId) {
-        this.animalId = animalId;
     }
 
     public double getWeight() {

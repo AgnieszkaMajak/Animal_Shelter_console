@@ -17,8 +17,6 @@ public class DataReader {
         clearBuffer();
         printer.printText("Podaj imię psa:");
         String name = getString();
-        printer.printText("Podaj ID psa:");
-        int id = getIntNoNegative();
         printer.printText("Podaj wiek psa:");
         int age = getIntNoNegative();
         printer.printText("Podaj wagę psa:");
@@ -28,15 +26,13 @@ public class DataReader {
         String castrated = getString();
         boolean isCastrated = stringToBoolean(castrated);
 
-        return new Dog(name, id, age, weight, isCastrated);
+        return new Dog(name, age, weight, isCastrated);
     }
 
     public Cat readAndCreateCat(){
         clearBuffer();
         printer.printText("Podaj imię kota:");
         String name = getString();
-        printer.printText("Podaj ID kota:");
-        int id = getIntNoNegative();
         printer.printText("Podaj wiek kota:");
         int age = getIntNoNegative();
         printer.printText("Podaj wagę kota:");
@@ -46,7 +42,7 @@ public class DataReader {
         String castrated = getString();
         boolean isCastrated = stringToBoolean(castrated);
 
-        return new Cat(name, id, age, weight, isCastrated);
+        return new Cat(name, age, weight, isCastrated);
     }
 
     public void close(){

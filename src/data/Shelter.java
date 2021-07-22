@@ -1,15 +1,20 @@
 package data;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Shelter {
-    private ArrayList<Animal> animals = new ArrayList<>();
+    private TreeMap<Integer, Animal> animals = new TreeMap<>();
 
-    public ArrayList<Animal> getAnimals() {
+    public Map<Integer, Animal> getAnimals() {
         return animals;
     }
 
     public void addToAnimals(Animal animal) {
-        animals.add(animal);
+        if (animals.isEmpty()){
+            animals.put(1, animal);
+        }else {
+            int key = animals.lastKey();
+            animals.put((key+1), animal);
+        }
     }
 }
